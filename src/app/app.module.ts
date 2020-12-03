@@ -9,8 +9,6 @@ import { MaterialModule } from './material.module';
 import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './home/home.component';
-import { MaterialModule } from './material.module';
 import { AuthService } from './shared/services/auth.service';
 import { NotificationService } from './shared/services/notification.service';
 
@@ -26,11 +24,8 @@ import { NotificationService } from './shared/services/notification.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    CoursesComponent
-    MaterialModule,
-    HttpClientModule,
+    CoursesComponent,
   ],
-  declarations: [AppComponent, HomeComponent],
   providers: [
     AuthService,
     NotificationService
