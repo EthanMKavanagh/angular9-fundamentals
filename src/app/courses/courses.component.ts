@@ -23,7 +23,7 @@ export class CoursesComponent implements OnInit {
       id: 2,
       title: 'Vue Fundamentals',
       description: 'Learn the fundamentals of Vue',
-      percentComplete: 75,
+      percentComplete: 0,
       favorite: false
     },
     {
