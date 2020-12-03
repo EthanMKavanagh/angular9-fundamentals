@@ -5,6 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from './material.module';
+import { HomeComponent } from './home/home.component';
+import { CoursesComponent } from './courses/courses.component';
+import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from './material.module';
 import { AuthService } from './shared/services/auth.service';
@@ -15,6 +19,14 @@ import { NotificationService } from './shared/services/notification.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    MaterialModule,
+    HttpClientModule
+  ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    CoursesComponent
     MaterialModule,
     HttpClientModule,
   ],
