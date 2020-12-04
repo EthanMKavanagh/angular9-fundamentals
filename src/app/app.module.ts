@@ -9,8 +9,7 @@ import { MaterialModule } from './material.module';
 import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from './shared/services/auth.service';
-import { NotificationService } from './shared/services/notification.service';
+import { CoursesService } from './shared/services/courses.service';
 
 @NgModule({
   imports: [
@@ -27,8 +26,7 @@ import { NotificationService } from './shared/services/notification.service';
     CoursesComponent,
   ],
   providers: [
-    AuthService,
-    NotificationService
+    CoursesService
   ],
   bootstrap: [AppComponent],
 })

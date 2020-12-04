@@ -1,37 +1,32 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
-import { Course } from '../interfaces/course.interface';
-import { NotificationService } from './notification.service';
-
-const BASE_URL = 'http://localhost:3000/courses';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
-
-  constructor(private http: HttpClient, private notificationService: NotificationService) { }
-
-  getAllCourses(displayNotification: boolean) {
-    if (displayNotification) {
-      this.notificationService.notify('Get All Courses HTTP Call');
+  courses = [
+    {
+      id: 1,
+      title: 'Angular 9 Fundamentals',
+      description: 'Learn the fundamentals of Angular 9',
+      percentComplete: 25,
+      favorite: true
+    },
+    {
+      id: 2,
+      title: 'Vue Fundamentals',
+      description: 'Learn the fundamentals of Vue',
+      percentComplete: 0,
+      favorite: false
+    },
+    {
+      id: 3,
+      title: 'React Fundamentals',
+      description: 'Learn the fundamentals of React',
+      percentComplete: 100,
+      favorite: true
     }
-    return this.http.get<Course[]>(BASE_URL);
-  }
+  ];
 
-  createCourse(course: Course) {
-    this.notificationService.notify('Create Course HTTP Call');
-    return this.http.post<Course>(BASE_URL, course);
-  }
-
-  updateCourse(course: Course) {
-    this.notificationService.notify('Update Course HTTP Call');
-    return this.http.put<Course>(`${BASE_URL}/${course.id}`, course);
-  }
-
-  deleteCourse(id: number) {
-    this.notificationService.notify('Delete Course HTTP Call');
-    return this.http.delete(`${BASE_URL}/${id}`);
-  }
+  constructor() { }
 }
