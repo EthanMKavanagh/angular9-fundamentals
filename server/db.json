@@ -4,22 +4,8 @@
       "id": 1,
       "title": "Angular 9 Fundamentals",
       "description": "Learn the fundamentals of Angular 9",
-      "percentComplete": 26,
+      "percentComplete": 42,
       "favorite": true
-    },
-    {
-      "id": 2,
-      "title": "Funcitonal Javascript",
-      "description": "Brian is a demi-god",
-      "percentComplete": 49,
-      "favorite": true
-    },
-    {
-      "id": 3,
-      "title": "GraphQL for the Masses",
-      "description": "Scott Moss is the Boss",
-      "percentComplete": 0,
-      "favorite": false
     }
   ]
 }
