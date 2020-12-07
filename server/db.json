@@ -4,8 +4,22 @@
       "id": 1,
       "title": "Angular 9 Fundamentals",
       "description": "Learn the fundamentals of Angular 9",
-      "percentComplete": 42,
+      "percentComplete": 50,
       "favorite": true
+    },
+    {
+      "id": 2,
+      "title": "Functional Javascript",
+      "description": "Learn the fundamentals of Functional Javascript",
+      "percentComplete": 75,
+      "favorite": true
+    },
+    {
+      "id": 3,
+      "title": "GraphQL",
+      "description": "Learn the fundamentals of GraphQL",
+      "percentComplete": 0,
+      "favorite": false
     }
   ]
 }
