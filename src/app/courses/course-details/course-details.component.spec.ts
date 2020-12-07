@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
 
 import { CourseDetailsComponent } from './course-details.component';
 
@@ -9,7 +8,6 @@ describe('CourseDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule],
       declarations: [ CourseDetailsComponent ]
     })
     .compileComponents();
@@ -18,7 +16,6 @@ describe('CourseDetailsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CourseDetailsComponent);
     component = fixture.componentInstance;
-    component.selectedCourse = {} as any;
     fixture.detectChanges();
   });
 
