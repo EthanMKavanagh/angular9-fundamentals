@@ -1,4 +1,4 @@
-import { DebugElement, DebugEventListener } from '@angular/core';
+import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CoursesService } from '../shared/services/courses.service';
 
