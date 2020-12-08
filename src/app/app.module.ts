@@ -32,7 +32,7 @@ import { UsersComponent } from './users/users.component';
     CoursesListComponent,
     CourseDetailsComponent,
     LessonsListComponent,
-    UsersComponent,
+    UsersComponent
   ],
   providers: [
     CoursesService,
