@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DebugElement, DebugEventListener } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CoursesService } from '../shared/services/courses.service';
 
@@ -9,12 +9,19 @@ const coursesServiceStub = {
     return {
       subscribe: () => {}
     }
+  },
+  delete: () => {
+    return {
+      subscribe: () => {}
+    }
   }
 };
 
 describe('CoursesComponent', () => {
   let component: CoursesComponent;
   let fixture: ComponentFixture<CoursesComponent>;
+  let de: DebugElement;
+  let coursesService: CoursesService;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -27,10 +34,18 @@ describe('CoursesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CoursesComponent);
     component = fixture.componentInstance;
+    de = fixture.debugElement;
+    coursesService = de.injector.get(CoursesService);
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call coursesService.delete on delete', () => {
+    spyOn(coursesService, 'delete').and.callThrough();
+    component.deleteCourse(1);
+    expect(coursesService.delete).toHaveBeenCalledWith(1);
   });
 });
