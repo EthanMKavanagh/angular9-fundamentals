@@ -7,17 +7,7 @@ describe('CoursesService', () => {
   let service: CoursesService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [
-        {
-          provide: HttpClient,
-          useValue: jasmine.createSpyObj('HttpClient', ['get', 'post', 'put', 'delete'])
-        },
-        {
-          useValue: jasmine.createSpyObj('NotificationService', ['notify'])
-        }
-      ]
-    });
+    TestBed.configureTestingModule({});
     service = TestBed.inject(CoursesService);
   });
 
